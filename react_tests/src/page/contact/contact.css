@@ -20,3 +20,78 @@
 
 }
 
+
+.order-location {
+    display: flex;
+    flex-wrap: wrap;               /* чтобы на узких экранах колонки съезжали вниз */
+    justify-content: space-between;
+    gap: 20px;                     /* расстояние между колонками */
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Общий заголовок в колонке */
+.box-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #111;
+}
+
+/* Левая колонка */
+.order-box {
+    flex: 1 1 300px;              /* минимум 300px, рост пропорциональный */
+    max-width: 480px;
+}
+
+/* Форма внутри левой колонки */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-form input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.order-form button {
+    padding: 10px 12px;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Правая колонка */
+.location-box {
+    flex: 1 1 300px;
+    max-width: 480px;
+}
+
+.location-box p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Подстройка размера карты (если iframe) */
+.location-box iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Адаптив: на супер узких экранах */
+@media (max-width: 640px) {
+    .order-location {
+        flex-direction: column;
+    }
+}
+
